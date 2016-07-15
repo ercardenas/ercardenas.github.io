@@ -65,3 +65,8 @@ social:
 #    share_url:
 #    share_title:
 #    share_link:
+
+# Sections shown in the index page
+
+pages_list:
+  Blog: 'blog'
