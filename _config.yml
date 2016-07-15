@@ -9,6 +9,7 @@ description: > # this means to ignore newlines until "email:"
    techie / runner / blogger
 
 email: ecardenascasas@gmail.com
+favicon: "/assets/images/favicon.ico"
 #blog logo
 logo: "/assets/images/ec_logo.jpg"
 # blog cover
