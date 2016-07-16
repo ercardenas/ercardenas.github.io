@@ -14,12 +14,8 @@
 	      {% else %}
 	        <a class="navbar-brand" href="{{site.baseurl}}/">
 	      {% endif %}
-	          <div>
-	            {% if site.favicon %}
-	              <img src="{{site.baseurl}}{{ site.favicon }}" alt="">
-	            {% endif %}
-	            { {{ site.title }} }
-	          </div>
+	            <i class="fa fa-coffee" aria-hidden="true"></i>
+	             erick<span style="font-weight:normal;">site</span> 
 	        </a>
 	    </div>
 	    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -29,11 +25,16 @@
 
 	          <!-- Scroll to section for each page in index -->
 	          {% for p in site.pages_list %}
-	            <li>
-	              <a class="page-scroll" href="#{{ p[1] }}"> {{p[0]}} </a>
-	            </li>
+	          	{% if p[1] == "resume" %}
+	          		<li>
+	          			<a href="{{site.baseurl}}/assets/pdfs/ercardenas_resume.pdf" target="_blank"> {{p[0]}}
+	          		</li>
+	          	{% else %}
+		            <li>
+		              <a class="page-scroll" href="#{{ p[1] }}"> {{p[0]}} </a>
+		            </li>
+	           	{% endif %}
 	          {% endfor %}
-
 	        {% else %}
 	          <!-- Blog, Post, Tag and Error pages -->
 	          {% for p in site.pages_list %}
@@ -45,7 +46,13 @@
 	                <a href="{{site.baseurl}}/#blog"> {{p[0]}} </a>
 	              {% endif %}
 	            {% else %}
-	                <a href="{{site.baseurl}}/#{{ p[1] }}"> {{p[0]}} </a>
+	            	{% if p[1] == "resume" %}
+		          		<li>
+		          			<a href="{{site.baseurl}}/assets/pdfs/ercardenas_resume.pdf" target="_blank"> {{p[0]}}
+		          		</li>
+	          		{% else %}
+	                	<a href="{{site.baseurl}}/#{{ p[1] }}"> {{p[0]}} </a>
+	                {% endif %}
 	            {% endif %}
 	            </li>
 	          {% endfor %}
